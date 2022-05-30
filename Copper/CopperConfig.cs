@@ -5,9 +5,11 @@ namespace Copper;
 public sealed class ProgramConfig
 {
 	[JsonProperty("token")]
-	public string Token { get; private set; } = "OTY5ODQyNTIwODA2ODA1NTA0.GkyNww.EK6OzMdRSvfJEYeQKZRfoMX2vFATVdUzByukAA";
+	public string Token { get; private set; } = String.Empty;
 
-	[JsonProperty("prefixes")] public string[] Prefixes { get; private set; } = { "c!", "c+" };
+	[JsonProperty("prefixes")] public string[] Prefixes { get; private set; } = { "c!", "c+"};
 
 	[JsonProperty("shardcount")] public int ShardCount { get; private set; } = 1;
+
+	[JsonProperty("guildId")] public ulong GuildId { get; private set; }
 }
